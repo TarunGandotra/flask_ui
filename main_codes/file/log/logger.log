@@ -1,0 +1,16 @@
+2019-12-23 13:33:41,575 -    **-------Logger start from here-------**      **-------Logger start from here-------**      **-------Logger start from here-------**      **-------Logger start from here-------**   
+2019-12-23 13:33:41,575 -    **-------Logger start from here for APCATB_118473_UNIQ_S5-------**   
+2019-12-23 13:33:44,525 - ==================================================
+2019-12-23 13:33:44,525 - Got exception on main handler in BRX008 : Bibliographic reference cross-references 
+Traceback (most recent call last):
+  File "C:\Users\digiscape\Desktop\main_codes\RULE41.py", line 24, in rule41
+    while (str2[i1+j]!="["):
+IndexError: string index out of range
+2019-12-23 13:33:46,118 - 
+
+
+2019-12-23 13:34:48,042 -    **-------Logger start from here-------**      **-------Logger start from here-------**      **-------Logger start from here-------**      **-------Logger start from here-------**   
+2019-12-23 13:34:48,057 -    **-------Logger start from here for ACTROP_105096_UNIQ_S5-------**   
+2019-12-23 13:34:55,211 - 
+
+
