@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Report</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css1/styles1.css') }}">
+</head>
+<body>
+	<header>
+		<div class="container">
+		<!-- <div id="brandname">
+			ML App
+		</div> -->
+			<h2>DATA REPORT</h2>
+			<div>
+
+				<form class="form-inline" action="{{ url_for('home')}}">
+	    			<input type='submit' name='home' value='Home'>
+	 			</form>
+	 			
+			</div>
+		
+		</div>
+	</header>
+	<div>
+		<form class="form-inline" action="{{ url_for('sorted_data')}}" method="POST" > 
+			<label>Sort By:
+			<select name = "column">
+				{% for item in table.columns %}
+				<option label = {{item}} value = {{item}}>
+				{%endfor%}
+      		</select></label>
+      		<label>Order:
+      		<select name="order">
+      			<option label="Ascending" value="Ascending">
+      			<option label="Descending" value="Descending">
+      		</select></label>
+      		<input type='submit' name='sorted' value='sort'>
+      	</form>
+
+      	<form class="form-inline" action="{{ url_for('search')}}" method="POST" >
+      		<label>Search in:
+      		<select name = "search_col">
+				{% for item in table.columns %}
+				<option label = {{item}} value = {{item}}>
+				{%endfor%}
+      		</select></label>
+      		<label>Type text:</label>
+      		<input type="text" name="text">
+      		<input type="submit" name='searched' value="Search">
+		</form>
+
+		<form class="form-inline" action="{{ url_for('data_page')}}" method="POST" >
+      		<label>Page No:</label>
+      		<input type="text" name="PageNo." value={{page}}>
+      		<input type="submit" name='pages' value="Go">
+		</form>
+
+	</div>
+	<br>
+	<div>
+		{{table1|safe}}
+	</div>
+	<div>
+		<br>
+		<form class="form-inline" action="{{ url_for('home')}}">
+	    		<input type='submit' name='home' value='Home'>
+	 	</form>
+	</div>
+
+	    
+</body>
+</html>

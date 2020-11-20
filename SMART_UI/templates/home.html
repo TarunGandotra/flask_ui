@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<!--link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css1/styles1.css') }}">!-->
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script type="js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+	<header>
+
+		<div class="p-3 mb-2 bg-primary text-white">
+
+
+
+			<h1 align="center">Welcome To SMART QC Utility</h2>
+
+
+								<div class="p-4 mb-2 bg-primary text-white">
+									<h4 align="left">Select Date</h4>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<form action="{{ url_for('date_home')}}">
+									<label for="birthday"></label>
+									
+									<input type="date" id="birthday" name="birthday" >
+									<input class="btn btn-success" type="submit">
+
+
+								</form>
+								</div>
+
+			</div>
+
+<!--div class="card" style="width: 18rem;">
+	<button class="btn btn-primary btn-lg" action="{{ url_for('Smartq_AS')}}">UNIQS5</button>
+  <img class="card-img-top" src="{{url_for('static', filename='my_plot_AS.png')}}" alt="Card image cap">
+  <div class="card-body">-->
+
+
+
+  </div>
+</div>
+
+
+</header>
+
+
+
+<div class="container">
+	<div class="row">
+		
+
+			<!--form class="form-inline button" action="{{ url_for('Smartq_AS')}}">
+				<button type="button" class="btn btn-primary btn-lg">UNIQS5</button>       comment by himanshu negi!-->
+				<div class="col-sm-3">
+					<div class="card" style="width: 18rem;">
+						<form class="form-inline" action="{{ url_for('Smartq_AS')}}">    	
+							<button class="btn btn-primary btn-lg" >UNIQS5</button>
+							<img class="card-img-top" src="{{url_for('static', filename='my_plot_AS.png')}}" alt="Card image cap">
+
+							<div class="card-body">
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="col-sm-3">
+
+					<div class="card" style="width: 18rem;">
+						<form class="form-inline" action="{{ url_for('Smartq_CE')}}">       	
+							<button class="btn btn-primary btn-lg" >UNIQCE</button>
+							<img class="card-img-top" src="{{url_for('static', filename='my_plot_CE.png')}}" alt="Card image cap">
+							<div class="card-body">
+							</div>
+			<!--form class="form-inline" action="{{ url_for('Smartq_CE')}}">
+				<button  type="button" class="btn btn-primary btn-lg">UNIQCE</button>!-->
+						</form>
+					</div>
+				</div>	
+				<div class="col-sm-3">
+					<div class="card" style="width: 18rem;">
+						<form class="form-inline" action="{{ url_for('Smartq_CNU')}}">       	
+							<button class="btn btn-primary btn-lg" >UNIQCU</button>
+							<img class="card-img-top" src="{{url_for('static', filename='my_plot_CU.png')}}" alt="Card image cap">
+							<div class="card-body">
+							</div>
+					 <!--form class="form-inline" action="{{ url_for('Smartq_CNU')}}">
+					 	<button type="button" class="btn btn-primary btn-lg">UNIQCU</button>!-->
+					 	</form>
+					</div>
+				</div>
+			
+				<div class="col-sm-3">
+					<div class="card" style="width: 18rem;">
+						<form class="form-inline" action="{{ url_for('Uniq_Art')}}">       	
+							<button class="btn btn-primary btn-lg" >UNIQART</button>
+							<img class="card-img-top" src="{{url_for('static', filename='my_plot_Art.png')}}" alt="Card image cap">
+							<div class="card-body">
+							</div>
+
+			<!--form class="form-inline" action="{{ url_for('Uniq_Art')}}">
+				<button type="button" class="btn btn-primary btn-lg">UNIQART</button>!-->
+						</form>
+					</div>
+				</div>
+	</div>
+</div>			
+
+<div class="m1-container">
+
+</div>
+<br>
+<br>
+
+
+<!--div class="container">
+			<div class="row">
+		<div class="col-sm-3">
+			 <img src="{{url_for('static', filename='my_plot_AS.png')}}" align="middle"  />
+   		</form>
+		</div>
+		<div class="col-sm-3">
+			
+              <img src="{{url_for('static', filename='my_plot_CE.png')}}" align="middle" />
+         </form>
+		</div>
+		<div class="col-sm-3">
+		
+				<img src="{{url_for('static', filename='my_plot_CU.png')}}" align="middle" />
+         </form>
+		</div>
+
+		<div class="col-sm-3">
+			<img src="{{url_for('static', filename='my_plot_Art.png')}}" align="middle" />
+
+         </form>
+		</div>
+	</div>
+</div>!-->
+
+</body>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>batch</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css1/styles1.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<!-- <div id="brandname">
+			ML App
+		</div> -->
+		<h2>SMART QC BATCH MONITOR</h2>
+		<div>
+			<form class="form-inline" action="{{ url_for('home')}}">
+				<input type='submit' name='home' value='Home'>
+			</form>
+		</div>
+	</div>
+	</header>
+
+	<div class="ml-container">
+
+		<form class="form-inline" action="{{ url_for('predict')}}" method="POST">
+
+		
+		<label for="text">Name:</label><input type="text"  name="batchName"><br>
+		<label>Process Stage:
+		<select name = "processStage">
+	        <option label="CE" value = "CE">
+	        <option label="CNU" value = "CNU">
+	        <option label="SFIVE" value = "SFIVE">
+	        <option label="UNIART" value = "UNIART">
+      	</select> </label><br>
+      	<label for="text">No. Of Articles:</label> 
+		<input type="text"  name="noOfArticles"><br>
+		<label for="text">Parent Folder Name:</label>
+		<input type="text"  name="folderName"><br>
+		<label>
+		<!-- <input type="submit" class="btn-info" value="Start"><br> -->
+		<button type="submit" class="btn-info">Start</button>
+	    </label>
+	    </form>
+	    <br>
+	    <form class="form-inline" action="{{ url_for('home')}}">
+	    	<input type='submit' name='home' value='Home'>
+	    </form>
+
+
+
+	    
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
+

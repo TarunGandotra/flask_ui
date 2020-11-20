@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Report</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css1/styles1.css') }}">
+</head>
+<body>
+	<header>
+		<div class="container">
+		<!-- <div id="brandname">
+			ML App
+		</div> -->
+			<h2>Sorted Search Result</h2>
+			<div>
+
+				<form class="form-inline" action="{{ url_for('home')}}">
+	    			<input type='submit' name='home' value='Home'>
+	 			</form>
+			</div>
+		
+		</div>
+
+	</header>
+	<div>
+		<form class="form-inline" action="{{ url_for('search_sorted_data')}}" method="POST" > 
+			<label>Sort By:
+			<select name = "column" value={{sort}}>
+				{% for item in table.columns %}
+				<option label = {{item}} value = {{item}}>
+				{%endfor%}
+	  		</select></label>
+      		<label>Order:
+      		<select name="order" value={{order}}>
+      			<option label="Ascending" value="Ascending">
+      			<option label="Descending" value="Descending">
+      		</select></label>
+      		<input type='submit' name='sorted' value='sort'>
+	  	</form>
+	  	<br>
+		<form class="form-inline" action="{{ url_for('search_sort_page')}}" method="POST" >
+      		<label>Page No:</label>
+      		<input type="text" name="PageNo." value={{page}}>
+      		<input type="submit" name='pages' value="Go">
+		</form>
+	</div>
+	<div>
+		{{table1|safe}}
+	</div>
+</body>
+
